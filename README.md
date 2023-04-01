@@ -1,1 +1,1 @@
-trigle djojs[c okff idd
+trigle when 🤯🤯🤯🤯🤯🤯
