@@ -26,7 +26,7 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
-	public static var vsStupidVersion:String = '1 ( DEMO BUILD )'; // dunno why i stole this from echo engine...
+	public static var vsStupidVersion:String = '1 APRIL FOOLS RELEASE'; // dunno why i stole this from echo engine...
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
