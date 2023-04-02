@@ -38,6 +38,7 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		'credits',
 		'options',
+		'shop'
 	];
 
 	var magenta:FlxSprite;
@@ -241,12 +242,12 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
-									case 'shop':
-										MusicBeatState.switchState(new ShopState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
+									case 'shop':
+										MusicBeatState.switchState(new ShopState());
 								}
 							});
 						}
