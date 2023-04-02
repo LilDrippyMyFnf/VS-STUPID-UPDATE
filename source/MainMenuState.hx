@@ -37,8 +37,7 @@ class MainMenuState extends MusicBeatState
 		'story_mode',
 		'freeplay',
 		'credits',
-		'options',
-		'shop'
+		'options'
 	];
 
 	var magenta:FlxSprite;
