@@ -45,8 +45,8 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: "In the Menus",
 			state: null,
-			largeImageKey: 'StupidNor blep',
-			largeImageText: "Vs Stupid v1 DEMO"
+			largeImageKey: 'iconOG',
+			largeImageText: "Vs Stupid v1"
 		});
 	}
 
@@ -82,8 +82,8 @@ class DiscordClient
 		DiscordRpc.presence({
 			details: details,
 			state: state,
-			largeImageKey: 'StupidNor blep',
-			largeImageText: "Psych Engine Version: " + MainMenuState.psychEngineVersion,
+			largeImageKey: 'iconOG',
+			largeImageText: "Psych Engine: " + MainMenuState.psychEngineVersion,
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),
