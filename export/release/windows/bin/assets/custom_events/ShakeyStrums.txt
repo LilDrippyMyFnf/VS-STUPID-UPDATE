@@ -1,4 +1,0 @@
-shakes the opponents notes
-
-value 1 - amount
-value 2 - nothing
