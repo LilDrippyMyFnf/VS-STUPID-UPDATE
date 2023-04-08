@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_shop.png">
+	<!-- Created with Adobe Animate version 22.0.3.179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Shop Basic0000" x="0" y="0" width="365" height="137"/>
+	<SubTexture name="Shop Basic0001" x="365" y="0" width="365" height="137"/>
+	<SubTexture name="Shop Basic0002" x="0" y="137" width="365" height="137"/>
+	<SubTexture name="Shop Basic0003" x="365" y="137" width="365" height="137"/>
+	<SubTexture name="Shop Basic0004" x="0" y="274" width="365" height="137"/>
+	<SubTexture name="Shop Basic0005" x="365" y="274" width="365" height="137"/>
+	<SubTexture name="Shop Basic0006" x="0" y="411" width="365" height="137"/>
+	<SubTexture name="Shop Basic0007" x="365" y="411" width="365" height="137"/>
+	<SubTexture name="Shop Basic0008" x="0" y="548" width="365" height="137"/>
+	<SubTexture name="Shop White0000" x="365" y="548" width="365" height="137"/>
+	<SubTexture name="Shop White0001" x="0" y="685" width="365" height="137"/>
+	<SubTexture name="Shop White0002" x="365" y="685" width="365" height="137"/>
+</TextureAtlas>

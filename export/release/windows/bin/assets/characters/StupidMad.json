@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				50
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle-alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				42,
+				108
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "singRIGHT-alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				84,
+				42
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "singLEFT-alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				92,
+				-40
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "singDOWN-alt",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				46,
+				160
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "singUP-alt",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/StupidMad",
+	"position": [
+		40,
+		420
+	],
+	"healthicon": "stupidmad",
+	"flip_x": false,
+	"healthbar_colors": [
+		162,
+		0,
+		37
+	],
+	"camera_position": [
+		-340,
+		50
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}
