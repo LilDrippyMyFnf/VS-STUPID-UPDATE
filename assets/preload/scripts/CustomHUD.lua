@@ -1,20 +1,19 @@
 
 function onCreatePost() --everything written by Rhy
 
+    makeLuaText('songName', "Song: ", 0, 15, 495) --song name
+    setTextSize('songName', 24)
+    setTextFont('songName', 'PhantomMuff.ttf')
+    setTextColor('songName', 'FF000000')
+    addLuaText('songName', "Song: ", 0, 15, 595)
+    setObjectCamera('songName', 'other')
+
     makeLuaText('score', "Score: ", 0, 15, 375) --score
     setTextSize('score', 24)
     setTextFont('score', 'PhantomMuff.ttf')
     setTextColor('score', 'FF000000')
     addLuaText('score', "Score: ", 0, 150, 150)
     setObjectCamera('score', 'other')
-
-    makeLuaText('Vs Stupid v1 ( DEMO BUILD )', "Vs Stupid v1 ( DEMO BUILD )", 0, 15, 600) --watermark mod text
-    setTextSize('Vs Stupid v1 ( DEMO BUILD )', 24)
-    setTextFont('Vs Stupid v1 ( DEMO BUILD )', 'PhantomMuff.ttf')
-    setTextColor('Vs Stupid v1 ( DEMO BUILD )', 'FF000000')
-    addLuaText('Vs Stupid v1 ( DEMO BUILD )', "Vs Stupid v1 ( DEMO BUILD )", 0, 150, 150)
-    setObjectCamera('Vs Stupid v1 ( DEMO BUILD )', 'other')
-
 
     makeLuaText('misses', "Misses: ", 0, 15, 400) --misses
     setTextSize('misses', 24)
@@ -48,5 +47,7 @@ function onUpdatePost()
     setTextString('ratingName', 'Rating: '.. getPropertyFromClass(ratingName))
 
     setTextString('difficultyName', "Difficulty: ".. getPropertyFromClass(difficultyName))
+
+    setTextString('songName', "Song: ".. getPropertyFromClass(songName))
 
 end
