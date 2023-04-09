@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				-461
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "IDLEBOOP",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLEBOOP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				70,
 				-410
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "LEFTBOOP",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "LEFTBOOP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-29,
 				-476
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "DOWNBOOP",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "DOWNBOOP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				20,
 				-380
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "UPBOOP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "UPBOOP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				40,
 				-435
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "RIGHTBOOP",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "RIGHTBOOP"
 		}
 	],
 	"no_antialiasing": false,
@@ -65,9 +65,9 @@
 	"healthicon": "pat",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		176,
+		129,
+		154
 	],
 	"camera_position": [
 		-210,
