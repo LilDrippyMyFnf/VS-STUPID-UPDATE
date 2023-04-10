@@ -316,6 +316,8 @@ class PlayState extends MusicBeatState
 
 	var vocalsFinished:Bool = false;
 
+	var cinematicBars:Map<String, FlxSprite> = ['top' => null, 'bottom' => null];
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -383,6 +385,7 @@ class PlayState extends MusicBeatState
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
+
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
@@ -1690,6 +1693,65 @@ class PlayState extends MusicBeatState
 			}
 		});
 	}
+
+	function addCinematicBars(speed:Float = 7, distance:Float, ?cb:Void->Void = null)
+	{
+		if (distance == 0 || Math.isNaN(distance)){
+			if (cb != null)
+				cb();
+			#if debug
+			FlxG.log.notice('Failed to do bars');
+			#end
+			return;
+		}
+
+		if (cinematicBars["top"] == null)
+		{
+			cinematicBars["top"] = new FlxSprite(0, 0).makeGraphic(FlxG.width, Std.int(FlxG.height / distance), FlxColor.BLACK);
+			cinematicBars["top"].screenCenter(X);
+			cinematicBars["top"].cameras = [camHUD];
+			cinematicBars["top"].y = 0 - cinematicBars["top"].height; // offscreen
+			add(cinematicBars["top"]);
+		}
+
+		if (cinematicBars["bottom"] == null)
+		{
+			cinematicBars["bottom"] = new FlxSprite(0, 0).makeGraphic(FlxG.width, Std.int(FlxG.height / distance), FlxColor.BLACK);
+			cinematicBars["bottom"].screenCenter(X);
+			cinematicBars["bottom"].cameras = [camHUD];
+			cinematicBars["bottom"].y = FlxG.height; // offscreen
+			add(cinematicBars["bottom"]);
+		}
+
+		FlxTween.tween(cinematicBars["top"], {y: 0}, speed, {ease: FlxEase.circInOut});
+		FlxTween.tween(cinematicBars["bottom"], {y: FlxG.height - cinematicBars["bottom"].height}, speed, {ease: FlxEase.circInOut});
+
+		final e = [healthBarBG,healthBar,scoreTxt,iconP1,iconP2,timeBar,timeBarBG,timeTxt];
+		for (i in e){
+			FlxTween.tween(e, {alpha: 0}, speed, {ease: FlxEase.circInOut});
+		}
+	}
+
+	function removeCinematicBars(speed:Float)
+	{
+		if (speed == 0 || Math.isNaN(speed))
+			speed = 7;
+
+		if (cinematicBars["top"] != null)
+		{
+			FlxTween.tween(cinematicBars["top"], {y: 0 - cinematicBars["top"].height}, speed, {ease: FlxEase.circInOut});
+		}
+
+		if (cinematicBars["bottom"] != null)
+		{
+			FlxTween.tween(cinematicBars["bottom"], {y: FlxG.height}, speed, {ease: FlxEase.circInOut});
+		}
+
+		final e = [healthBarBG,healthBar,scoreTxt,iconP1,iconP2,timeBar,timeBarBG,timeTxt];
+		for (i in e){
+			FlxTween.tween(e, {alpha: 1}, speed, {ease: FlxEase.circInOut});
+		}
+	}	
 
 	function tankIntro()
 	{
@@ -3695,6 +3757,23 @@ class PlayState extends MusicBeatState
 				} else {
 					FunkinLua.setVarInArray(this, value1, value2);
 				}
+			
+			case 'Cinematic bars':
+				/*
+				var didbars:Bool = false;
+
+				if (!didbars){
+					addCinematicBars(Std.parseFloat(value1), Std.parseFloat(value2));
+					// didbars = true;
+				}
+				else {
+					removeCinematicBars(Std.parseFloat(value1));
+					// didbars = false;
+				}
+				didbars = !didbars;*/
+				addCinematicBars(Std.parseFloat(value1), Std.parseFloat(value2), () -> {
+					removeCinematicBars(Std.parseFloat(value1));
+				});
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}

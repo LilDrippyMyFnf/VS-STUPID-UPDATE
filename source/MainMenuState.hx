@@ -98,8 +98,8 @@ class MainMenuState extends MusicBeatState
 		// thank you, memehoovy for helping me with this code <3
 		// you're welcome <333
 		
-		var menuCharacter:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('StupidNor_MainMenu'));
-		menuCharacter.screenCenter(); // wowowowow
+		var menuCharacter:FlxSprite = new FlxSprite(700).loadGraphic(Paths.image('StupidNor_MainMenu'));
+		menuCharacter.screenCenter(Y); // wowowowow
 		menuCharacter.scrollFactor.set(0, 0);
 		add(menuCharacter);
 
