@@ -94,7 +94,7 @@ class CreditsState extends MusicBeatState
 			['MyFnf',		'fnf',		'Created a few concept arts',								'https://twitter.com/myfnf1698',	'367588'],
 			['Voosomni',                            'VOO',               'EX Artist of VS Stupid',                    '',           'E6CEA0'],
 			['Animators'],
-			['CrazyDany',         'dany',        'Animated the character ( he made )',      '',          'D3D3D3'],
+			['CrazyDany',         'dany',        'Animated the characters he made ',      '',          'D3D3D3'],
 			['Playtesters'],
 			['Bambigaming2023',  'bamb',   'Main Mod Tester', 'https://www.youtube.com/channel/UCVo2j0HfNbumBhMs8L6VuIw', 'BFFF00'],
 			['Github Contributors'],
