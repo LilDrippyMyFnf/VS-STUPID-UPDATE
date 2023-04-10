@@ -97,7 +97,7 @@ class CreditsState extends MusicBeatState
 			['CrazyDany',         'dany',        'Animated the characters he made ',      '',          'D3D3D3'],
 			['Playtesters'],
 			['Bambigaming2023',  'bamb',   'Main Mod Tester', 'https://www.youtube.com/channel/UCVo2j0HfNbumBhMs8L6VuIw', 'BFFF00'],
-			['Github Contributors'],
+			['Contributors'],
 			['Tyler',  'sus',  'Animator',  'https://twitter.com/TylerSt48813004', 'Ff0000'],
 			['Thaorfaje',  'shhh',   'Animator',  '',  '0000FF'],
 			['WarlyFarly_unity',				'unity',   'Added small features to some songs',	'https://gamejolt.com/@WarlyFarly_Unity',		'FF0000'],
