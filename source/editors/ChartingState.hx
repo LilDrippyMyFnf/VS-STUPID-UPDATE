@@ -90,7 +90,9 @@ class ChartingState extends MusicBeatState
 		['Screen Shake', "Value 1: Camera shake\nValue 2: HUD shake\n\nEvery value works as the following example: \"1, 0.05\".\nThe first number (1) is the duration.\nThe second number (0.05) is the intensity."],
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
-		['Set Property', "Value 1: Variable name\nValue 2: New value"]
+		['Set Property', "Value 1: Variable name\nValue 2: New value"],
+		['Cinematic Bars', 'Value 1 : SPEED\nMark this with with how fast you would like the\nbars move In/Out in seconds.\n(Minimum is 0.2).\nValue 2 : DISTANCE\n
+		Mark this with how far you want to bars to move in. \n(Recommended 90)\n(If marked with 0, then the event will end).']
 	];
 
 	var _file:FileReference;
