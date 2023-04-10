@@ -318,8 +318,6 @@ class PlayState extends MusicBeatState
 
 	var cinematicBars:Map<String, FlxSprite> = ['top' => null, 'bottom' => null];
 
-	var camBars:FlxCamera;
-
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -385,16 +383,13 @@ class PlayState extends MusicBeatState
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay', false);
 
 		camGame = new FlxCamera();
-		camBars = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
 
-		camBars.bgColor.alpha = 0;
 		camHUD.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
-		FlxG.cameras.add(camBars, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
@@ -1704,7 +1699,9 @@ class PlayState extends MusicBeatState
 		if (distance == 0 || Math.isNaN(distance)){
 			if (cb != null)
 				cb();
+			#if debug
 			FlxG.log.notice('Failed to do bars');
+			#end
 			return;
 		}
 
@@ -1712,7 +1709,7 @@ class PlayState extends MusicBeatState
 		{
 			cinematicBars["top"] = new FlxSprite(0, 0).makeGraphic(FlxG.width, Std.int(FlxG.height / distance), FlxColor.BLACK);
 			cinematicBars["top"].screenCenter(X);
-			cinematicBars["top"].cameras = [camBars];
+			cinematicBars["top"].cameras = [camHUD];
 			cinematicBars["top"].y = 0 - cinematicBars["top"].height; // offscreen
 			add(cinematicBars["top"]);
 		}
@@ -1721,7 +1718,7 @@ class PlayState extends MusicBeatState
 		{
 			cinematicBars["bottom"] = new FlxSprite(0, 0).makeGraphic(FlxG.width, Std.int(FlxG.height / distance), FlxColor.BLACK);
 			cinematicBars["bottom"].screenCenter(X);
-			cinematicBars["bottom"].cameras = [camBars];
+			cinematicBars["bottom"].cameras = [camHUD];
 			cinematicBars["bottom"].y = FlxG.height; // offscreen
 			add(cinematicBars["bottom"]);
 		}
