@@ -27,7 +27,8 @@ class MasterEditorMenu extends MusicBeatState
 		'Dialogue Portrait Editor',
 		'Character Editor',
 		'Chart Editor',
-		'Unused Shop Menu'//probably works....
+		'Unused Shop Menu',
+		'UnFinished Story Mode Menu'
 	];
 	private var grpTexts:FlxTypedGroup<Alphabet>;
 	private var directories:Array<String> = [null];
@@ -41,7 +42,7 @@ class MasterEditorMenu extends MusicBeatState
 		FlxG.camera.bgColor = FlxColor.BLACK;
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("Modding Menu", null);
+		DiscordClient.changePresence("Master Editors Menu", null);
 		#end
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
@@ -129,6 +130,9 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new ChartingState(), false);
 				case 'Unused Shop Menu'://left this as'unused'
 					LoadingState.loadAndSwitchState(new ShopState(), false);
+				case 'UnFinished Story Mode Menu'://left this as'unused'
+					LoadingState.loadAndSwitchState(new StoryModeThing(), false);
+
 			}
 			FlxG.sound.music.volume = 0;
 			#if PRELOAD_ALL

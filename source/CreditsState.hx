@@ -104,7 +104,11 @@ class CreditsState extends MusicBeatState
 			[''],
 			['Special Thanks'],
 			['Psych Engine Team', 'shadowmario',		'Psych Engine', '',	'B42F71'],
-			["Funkin' Crew", 'ninjamuffin99',	"Created Friday Night Funkin' ",   '',	'CF2D2D']
+			["Funkin' Crew", 'ninjamuffin99',	"Created Friday Night Funkin' ",   '',	'CF2D2D'],
+			["Discord", 'discord',	"Discord RPC\n( ShadowMario coded the discord rpc so yeah xdd )",   'https://discord.com/',	'367588'],
+			[''],
+			['Shout Outs'],
+			["IMPOSTORM", 'discord',	"Vs Impostor Splash Notes ",   '',	'CF2D2D'] //we love you, clowfoe <33
 			// I should be ashamed that i didn't credit the whole funkin' crew, and psych engine team so sorry Xdddd
 
 		];

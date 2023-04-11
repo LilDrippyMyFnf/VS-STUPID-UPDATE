@@ -32,8 +32,8 @@ class ModesShit extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Modes'; //this can be called difficultys instead
-		rpcTitle = 'Modes Menu'; //for Discord Rich Presence
+		title = 'Vs Stupid Options'; //additon to 'modes' menu ^^
+		rpcTitle = 'Vs Stupid Options Menu'; //for Discord Rich Presence
 
 		var option:Option = new Option('Neutral Mode',
 			'If checked, This will enable modes: Easy,Normal,Hard',
@@ -72,6 +72,15 @@ class ModesShit extends BaseOptionsMenu
 			'bool',
 			false);
 		addOption(option);
+
+		var option:Option = new Option('Vs Stupid v2 Vanilla assets',
+		"This will enable some v2 features \n( DONT USE CUZ ITS BETA AND ITS USELESS )",
+		'vanillaV2',
+		'bool',
+		false);
+	 addOption(option);
+
+	
 
 		super();
 	}
