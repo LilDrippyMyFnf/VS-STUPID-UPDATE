@@ -28,7 +28,8 @@ import Controls;
 import openfl.Lib;
 
 using StringTools;
-class ModesShit extends BaseOptionsMenu
+
+class StupidOptionsXD extends BaseOptionsMenu
 {
 	public function new()
 	{
