@@ -130,8 +130,6 @@ class MasterEditorMenu extends MusicBeatState
 					LoadingState.loadAndSwitchState(new ChartingState(), false);
 				case 'Unused Shop Menu'://left this as'unused'
 					LoadingState.loadAndSwitchState(new ShopState(), false);
-				case 'UnFinished Story Mode Menu'://left this as'unused'
-					LoadingState.loadAndSwitchState(new StoryModeThing(), false);
 
 			}
 			FlxG.sound.music.volume = 0;
