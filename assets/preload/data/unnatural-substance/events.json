@@ -6,8 +6,7 @@
 				[
 					[
 						"Cinematic Bars",
-						"0.5",
-						"90"
+						"true"
 					]
 				]
 			],
@@ -1461,8 +1460,7 @@
 				[
 					[
 						"Cinematic Bars",
-						"0.5",
-						"0"
+						"false"
 					],
 					[
 						"Flash Camera",

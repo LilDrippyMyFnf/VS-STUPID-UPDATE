@@ -316,7 +316,10 @@ class PlayState extends MusicBeatState
 
 	var vocalsFinished:Bool = false;
 
-	var cinematicBars:Map<String, FlxSprite> = ['top' => null, 'bottom' => null];
+	// var cinematicBars:Map<String, FlxSprite> = ['top' => null, 'bottom' => null];
+
+	var topBar:FlxSprite;
+	var bottomBar:FlxSprite;
 
 	override public function create()
 	{
@@ -421,6 +424,9 @@ class PlayState extends MusicBeatState
 		// String for when the game is paused
 		detailsPausedText = "Paused - " + detailsText;
 		#end
+
+		topBar = new FlxSprite(0, -170).makeGraphic(1280, 170, FlxColor.BLACK);
+		bottomBar = new FlxSprite(0, 720).makeGraphic(1280, 170, FlxColor.BLACK);
 
 		GameOverSubstate.resetVariables();
 		var songName:String = Paths.formatToSongPath(SONG.song);
@@ -988,8 +994,6 @@ class PlayState extends MusicBeatState
 			dialogue = CoolUtil.coolTextFile(file);
 		}
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
-		// doof.x += 70;
-		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
 		doof.nextDialogueThing = startNextDialogue;
@@ -1143,6 +1147,9 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+
+		topBar.cameras = [camOther];
+		bottomBar.cameras = [camOther];
 
 		startingSong = true;
 		
@@ -1694,7 +1701,7 @@ class PlayState extends MusicBeatState
 		});
 	}
 
-	function addCinematicBars(speed:Float = 7, distance:Float, ?cb:Void->Void = null)
+	/*function addCinematicBars(speed:Float = 7, distance:Float, ?cb:Void->Void = null)
 	{
 		if (distance == 0 || Math.isNaN(distance)){
 			if (cb != null)
@@ -1751,7 +1758,30 @@ class PlayState extends MusicBeatState
 		for (i in e){
 			FlxTween.tween(e, {alpha: 1}, speed, {ease: FlxEase.circInOut});
 		}
-	}	
+	}*/
+
+	function cinematicBars(appear:Bool) //IF (TRUE) MOMENT?????
+	{
+		#if debug
+		FlxG.log.notice('appear is: $appear');
+		#end
+		if (appear)
+		{
+			add(topBar);
+			add(bottomBar);
+			FlxTween.tween(topBar, {y: 0}, 0.5, {ease: FlxEase.quadOut});
+			FlxTween.tween(bottomBar, {y: 550}, 0.5, {ease: FlxEase.quadOut});
+		}
+		else
+		{
+			FlxTween.tween(topBar, {y: -170}, 0.5, {ease: FlxEase.quadOut});
+			FlxTween.tween(bottomBar, {y: 720}, 0.5, {ease: FlxEase.quadOut, onComplete: function(fuckme:FlxTween)
+			{
+				remove(topBar);
+				remove(bottomBar);
+			}});
+		}
+	}
 
 	function tankIntro()
 	{
@@ -3771,9 +3801,10 @@ class PlayState extends MusicBeatState
 					// didbars = false;
 				}
 				didbars = !didbars;*/
-				addCinematicBars(Std.parseFloat(value1), Std.parseFloat(value2), () -> {
+				/*addCinematicBars(Std.parseFloat(value1), Std.parseFloat(value2), () -> {
 					removeCinematicBars(Std.parseFloat(value1));
-				});
+				});*/
+				cinematicBars(value1.toLowerCase() == 'true' ? true : false);
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
