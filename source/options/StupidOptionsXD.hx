@@ -74,12 +74,20 @@ class StupidOptionsXD extends BaseOptionsMenu
 			false);
 		addOption(option);
 
-		var option:Option = new Option('Vs Stupid v2 Vanilla assets',
+		/*var option:Option = new Option('Vs Stupid v2 Vanilla assets',
 		"This will enable some v2 features \n( DONT USE CUZ ITS BETA AND ITS USELESS )",
 		'vanillaV2',
 		'bool',
 		false);
-	 addOption(option);
+	 addOption(option);*/
+
+	 var option:Option = new Option('Botplay Text:',
+	 "How should the botplay tet display as?",
+	 'botPlayType',
+	 'string',
+	 'BOTPLAY',
+	 ['BOTPLAY', 'SHOWCASE']);
+     addOption(option);
 
 	
 
