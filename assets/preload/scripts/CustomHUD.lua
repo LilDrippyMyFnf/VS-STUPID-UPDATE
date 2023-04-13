@@ -15,11 +15,11 @@ function onCreatePost() --everything written by Rhy
     addLuaText('score', "Score: ", 0, 150, 150)
     setObjectCamera('score', 'other')
 
-    makeLuaText('misses', "Misses: ", 0, 15, 400) --misses
+    makeLuaText('misses', "Combo Breaks: ", 0, 15, 400) -- misses / combo breaks
     setTextSize('misses', 24)
     setTextFont('misses', 'PhantomMuff.ttf')
     setTextColor('misses', 'FF000000')
-    addLuaText('misses', "Misses: ", 0, 150, 140)
+    addLuaText('misses', "Combo Breaks: ", 0, 150, 140)
     setObjectCamera('misses', 'other')
 
     makeLuaText('ratingName', "Rating: ", 0, 15, 425) --rating
@@ -42,7 +42,7 @@ function onUpdatePost()
 
     setTextString('score', 'Score: '.. getPropertyFromClass(score))
 
-    setTextString('misses', 'Misses: '.. getPropertyFromClass(misses))
+    setTextString('misses', 'Combo Breaks: '.. getPropertyFromClass(misses))
 
     setTextString('ratingName', 'Rating: '.. getPropertyFromClass(ratingName))
 
