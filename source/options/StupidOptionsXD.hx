@@ -82,7 +82,7 @@ class StupidOptionsXD extends BaseOptionsMenu
 	 addOption(option); // re-adding, but its still wip!
 
 	 var option:Option = new Option('Botplay Text:',
-	 "How should the botplay tet display as?",
+	 "How should the botplay tet display as? \n( This Feature is being fixed due to a issue in playstate.hx! ).",
 	 'botPlayType',
 	 'string',
 	 'BOTPLAY',
