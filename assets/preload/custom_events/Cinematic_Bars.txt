@@ -1,0 +1,5 @@
+sus stuff [:l
+
+Value 1: show - 1, hide - 2
+
+Value 2: speed
