@@ -89,8 +89,6 @@ class StupidOptionsXD extends BaseOptionsMenu
 	 ['BOTPLAY', 'SHOWCASE']);
      addOption(option);
 
-	
-
 		super();
 	}
 	/*there is no FUCKING GODDAMN WAY 
