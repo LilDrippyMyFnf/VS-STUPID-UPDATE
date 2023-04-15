@@ -3,7 +3,7 @@
 		{
 			"sound": "",
 			"speed": 0.02,
-			"portrait": "bf",
+			"portrait": "StupidMad",
 			"boxState": "angry",
 			"expression": "pissed",
 			"text": "Dude what the fuck!!!!"
@@ -19,7 +19,7 @@
 		{
 			"sound": "",
 			"speed": 0.05,
-			"portrait": "bf",
+			"portrait": "StupidMad",
 			"boxState": "normal",
 			"expression": "pissed",
 			"text": "Fuck..........."
@@ -27,7 +27,7 @@
 		{
 			"sound": "",
 			"speed": 0.00500000000000001,
-			"portrait": "bf",
+			"portrait": "StupidMad",
 			"boxState": "angry",
 			"expression": "pissed",
 			"text": "This time i'm gettin' yo ass!"
@@ -59,7 +59,7 @@
 		{
 			"sound": "",
 			"speed": 0.02,
-			"portrait": "bf",
+			"portrait": "StupidMad",
 			"boxState": "angry",
 			"expression": "pissed",
 			"text": "Shut the FUCK UP!!!!"
@@ -83,7 +83,7 @@
 		{
 			"sound": "",
 			"speed": 0.025,
-			"portrait": "bf",
+			"portrait": "StupidMad",
 			"boxState": "angry",
 			"expression": "pissed",
 			"text": "shut up dawg!!"
