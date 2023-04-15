@@ -1,0 +1,100 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "pissed",
+			"text": "Dude what the fuck!!!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "excited",
+			"text": "Sorry cut! That was too easy!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "pissed",
+			"text": "Fuck..........."
+		},
+		{
+			"sound": "",
+			"speed": 0.00500000000000001,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "pissed",
+			"text": "This time i'm gettin' yo ass!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Fuck nah, it'll be easy ( once again )"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "Why does he get so mad over losing?"
+		},
+		{
+			"sound": "",
+			"speed": 0.00500000000000001,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "excited",
+			"text": "HE'S A SORE LOSER!! HAAAH LMAOOOOO"
+		},
+		{
+			"sound": "",
+			"speed": 0.02,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "pissed",
+			"text": "Shut the FUCK UP!!!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "its like i'm scared of a fucking triangle."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "pissed",
+			"text": "bro thinks he's the biggest bird"
+		},
+		{
+			"sound": "",
+			"speed": 0.025,
+			"portrait": "bf",
+			"boxState": "angry",
+			"expression": "pissed",
+			"text": "shut up dawg!!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "gf",
+			"boxState": "normal",
+			"expression": "demon",
+			"text": "this is like 2 babies fighting bru-"
+		}
+	]
+}
