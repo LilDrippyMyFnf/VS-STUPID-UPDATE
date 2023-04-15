@@ -89,7 +89,7 @@ class CreditsState extends MusicBeatState
 			['Stefan2008',          '2008',      'EX Programmer', 'https://twitter.com/StefanBETA123',      'FFA500'],
 			['ZSolarDev',         'zeoz',        'Additional Programmer',      'https://twitter.com/ZSolarDev',          '367588'],
 			['Composers'],
-		    ['MyFnf',		'fnf',		'Did ALL the music ( xd )',								'https://twitter.com/myfnf1698',	'367588'],
+		        ['MyFnf',		'fnf',		'Did ALL the music ( xd )',								'https://twitter.com/myfnf1698',	'367588'],
 			['Artists'],
 			['CrazyDany',         'dany',        'Main Artist',      '',          'D3D3D3'],
 			['MyFnf',		'fnf',		'Created a few concept arts',								'https://twitter.com/myfnf1698',	'367588'],
@@ -105,7 +105,7 @@ class CreditsState extends MusicBeatState
 			['Psych Engine Team', 'shadowmario',		'Psych Engine', '',	'B42F71'],
 			["Funkin' Crew", 'ninjamuffin99',	"Created Friday Night Funkin' ",   '',	'CF2D2D'],
 			["Discord", 'discord',	"Discord RPC\n( ShadowMario coded the discord rpc so yeah xdd )",   'https://discord.com/',	'367588'],
-			["IMPOSTORM", 'discord',	"Vs Impostor Splash Notes ",   '',	'CF2D2D'] //we love you, clowfoe <33
+			["IMPOSTORM", 'discord',	"Vs Impostor Note Splashes, and Ghost Trail Effect",   '',	'CF2D2D'] //we love you, clowfoe <33
 			// I should be ashamed that i didn't credit the whole funkin' crew, and psych engine team so sorry Xdddd
 
 		];
