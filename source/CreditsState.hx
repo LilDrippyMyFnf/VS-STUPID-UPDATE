@@ -89,10 +89,15 @@ class CreditsState extends MusicBeatState
 			['Stefan2008',          '2008',      'EX Programmer', 'https://twitter.com/StefanBETA123',      'FFA500'],
 			['ZSolarDev',         'zeoz',        'Additional Programmer',      'https://twitter.com/ZSolarDev',          '367588'],
 			['Composers'],
+<<<<<<< HEAD
 		['MyFnf',		'fnf',		'Did ALL the music ( xd )',								'https://twitter.com/myfnf1698',	'367588'],
+=======
+		    ['MyFnf',		'fnf',		'Did ALL the music ( xd )',								'https://twitter.com/myfnf1698',	'367588'],
+>>>>>>> parent of 662e9c1 (Revert "@HiMyNameIs - New Member")
 			['Artists'],
 			['CrazyDany',         'dany',        'Main Artist',      '',          'D3D3D3'],
-			['MyFnf',		'fnf',		'Created a few concept arts',								'https://twitter.com/myfnf1698',	'367588'],
+			['HiMyNameis',         'hi',        'Album Cover Artist\nAnd Made The Icons',      '',          'D3D3D3'],
+			['MyFnf',		'fnf',		'Made Red Droppys Sprites',								'https://twitter.com/myfnf1698',	'367588'],
 			['Voosomni',                            'VOO',               'Co- Artist of VS Stupid',                    '',           'E6CEA0'],
 			['Animators'],
 			['Tyler',  'sus',  'Animator',  'https://twitter.com/TylerSt48813004', 'Ff0000'],
