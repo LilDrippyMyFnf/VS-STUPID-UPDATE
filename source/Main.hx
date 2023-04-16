@@ -53,28 +53,6 @@ class Main extends Sprite
 	{
 		super();
 
-		if (stage != null)
-		{
-			init();
-		}
-		else
-		{
-			addEventListener(Event.ADDED_TO_STAGE, init);
-		}
-	}
-
-	private function init(?E:Event):Void
-	{
-		if (hasEventListener(Event.ADDED_TO_STAGE))
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-		}
-
-		setupGame();
-	}
-
-	private function setupGame():Void
-	{
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
 
@@ -114,9 +92,7 @@ class Main extends Sprite
 		#if desktop
 		if (!DiscordClient.isInitialized) {
 			DiscordClient.initialize();
-			Application.current.window.onClose.add(function() {
-				DiscordClient.shutdown();
-			});
+			Application.current.window.onClose.add(() -> DiscordClient.shutdown());
 		}
 		#end
 	}
