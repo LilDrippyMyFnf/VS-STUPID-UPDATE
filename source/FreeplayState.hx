@@ -71,7 +71,6 @@ class FreeplayState extends MusicBeatState
 			var leSongs:Array<String> = [];
 			var leChars:Array<String> = [];
 
-			ScreenCenter();
 
 			for (j in 0...leWeek.songs.length)
 			{
@@ -116,7 +115,9 @@ class FreeplayState extends MusicBeatState
 			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
 			songText.isMenuItem = true;
 			songText.targetY = i - curSelected;
+			ScreenCenter();
 			grpSongs.add(songText);
+
 
 			var maxWidth = 980;
 			if (songText.width > maxWidth)
