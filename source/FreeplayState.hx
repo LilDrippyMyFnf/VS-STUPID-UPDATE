@@ -115,7 +115,7 @@ class FreeplayState extends MusicBeatState
 			var songText:Alphabet = new Alphabet(90, 320, songs[i].songName, true);
 			songText.isMenuItem = true;
 			songText.targetY = i - curSelected;
-			ScreenCenter();
+
 			grpSongs.add(songText);
 
 
@@ -166,6 +166,7 @@ class FreeplayState extends MusicBeatState
 		changeSelection();
 		changeDiff();
 
+		ScreenCenter();
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
 		// JUST DOIN THIS SHIT FOR TESTING!!!
