@@ -1780,11 +1780,16 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(bottomBar, {y: 550}, 0.5, {ease: FlxEase.quadOut});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 130}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 130}, 0.5, {ease: FlxEase.quadOut});
 			}
+
+			/* var ogSpeed = Reflect.copy(SONG.speed);
+
+			if (SONG.song.toLowerCase() == 'unnatural-substance')
+				FlxTween.tween(SONG.speed, {speed: ogSpeed - 1}, 0.5, {ease: FlxEase.quadOut});*/
 		}
 		else
 		{
@@ -1796,10 +1801,10 @@ class PlayState extends MusicBeatState
 			}});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 130}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 130}, 0.5, {ease: FlxEase.quadOut});
 			}
 		}
 	}
