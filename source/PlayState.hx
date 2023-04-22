@@ -1779,13 +1779,13 @@ class PlayState extends MusicBeatState
 			add(topBar);
 			add(bottomBar);
 			FlxTween.tween(topBar, {y: 0}, 0.5, {ease: FlxEase.quadOut});
-			FlxTween.tween(bottomBar, {y: 530}, 0.5, {ease: FlxEase.quadOut});
+			FlxTween.tween(bottomBar, {y: 550}, 0.5, {ease: FlxEase.quadOut});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 50}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 50}, 0.5, {ease: FlxEase.quadOut});
 			}
 
 			/* var ogSpeed = Reflect.copy(SONG.speed);
@@ -1795,18 +1795,18 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			FlxTween.tween(topBar, {y: -150}, 0.5, {ease: FlxEase.quadOut});
-			FlxTween.tween(bottomBar, {y: 620}, 0.5, {ease: FlxEase.quadOut, onComplete: function(fuckme:FlxTween)
+			FlxTween.tween(topBar, {y: -170}, 0.5, {ease: FlxEase.quadOut});
+			FlxTween.tween(bottomBar, {y: 720}, 0.5, {ease: FlxEase.quadOut, onComplete: function(fuckme:FlxTween)
 			{
 				remove(topBar);
 				remove(bottomBar);
 			}});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 50}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 50}, 0.5, {ease: FlxEase.quadOut});
 			}
 		}
 	}
