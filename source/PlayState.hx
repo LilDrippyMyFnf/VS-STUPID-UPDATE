@@ -3835,12 +3835,23 @@ class PlayState extends MusicBeatState
 				cinematicBars(value1.toLowerCase() == 'true' ? true : false);
 			
 			case 'add BG character':
-				addBGCharacter();
+				var f:Array<String> = value1.split(',');
+				var splitter:Array<String> = value2.split(',');
+				var piss:Bool = trueorfalse(splitter[0]);
+				var defsMap:Map<Array<Dynamic>, 
+				var defs:SpriteDefs = null;
+				for (i in 0...split2.length)
+					defs = split2[i];
+				addBGCharacter(f[0], f[1], piss, defs);
 
 			case 'do BG character':
 				doBGCharacterMovement();
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
+	}
+
+	inline function trueorfalse(which:String):Bool{
+		return which.toLowerCase() == 'true' ? true : false;
 	}
 
 	function moveCameraSection():Void {
