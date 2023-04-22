@@ -44,7 +44,7 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: Vs Stupid Linux
+          name: linux
           path: 'export/release/linux/bin'
   buildWindows:
     runs-on: windows-latest
@@ -71,7 +71,7 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: Vs Stupid Windows
+          name: windows
           path: export/release/windows/bin
   buildMac:
     runs-on: macos-latest
@@ -97,5 +97,5 @@ jobs:
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: Vs Stupid MacOS
+          name: macOS
           path: export/release/macos/bin
