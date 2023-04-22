@@ -1778,6 +1778,13 @@ class PlayState extends MusicBeatState
 			add(bottomBar);
 			FlxTween.tween(topBar, {y: 0}, 0.5, {ease: FlxEase.quadOut});
 			FlxTween.tween(bottomBar, {y: 550}, 0.5, {ease: FlxEase.quadOut});
+
+			for (i in 0...opponentStrums.length){
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+			}
+			for (i in 0...playerStrums.length){
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
+			}
 		}
 		else
 		{
@@ -1787,6 +1794,13 @@ class PlayState extends MusicBeatState
 				remove(topBar);
 				remove(bottomBar);
 			}});
+
+			for (i in 0...opponentStrums.length){
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+			}
+			for (i in 0...playerStrums.length){
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
+			}
 		}
 	}
 
