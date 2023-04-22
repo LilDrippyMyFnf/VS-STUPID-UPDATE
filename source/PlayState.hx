@@ -1157,8 +1157,8 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
-		topBar.cameras = [camOther];
-		bottomBar.cameras = [camOther];
+		topBar.cameras = [camHUD];
+		bottomBar.cameras = [camHUD];
 
 		startingSong = true;
 		
@@ -1782,10 +1782,10 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(bottomBar, {y: 550}, 0.5, {ease: FlxEase.quadOut});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 50}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 50}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y + 70}, 0.5, {ease: FlxEase.quadOut});
 			}
 
 			/* var ogSpeed = Reflect.copy(SONG.speed);
@@ -1803,10 +1803,10 @@ class PlayState extends MusicBeatState
 			}});
 
 			for (i in 0...opponentStrums.length){
-				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 50}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(opponentStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
 			}
 			for (i in 0...playerStrums.length){
-				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 50}, 0.5, {ease: FlxEase.quadOut});
+				FlxTween.tween(playerStrums.members[i], {y: strumLine.y - 70}, 0.5, {ease: FlxEase.quadOut});
 			}
 		}
 	}
