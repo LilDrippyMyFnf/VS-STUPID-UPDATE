@@ -70,7 +70,7 @@
 	<assets path="assets/shared"        library="shared"        exclude="*.mp3" unless="web"/>
 
 	<section if="SOUNDFONTS_ALLOWED">
-		<assets path='assets/soundfonts' rename='extra' embed='false'/>
+		<assets path='soundfonts' rename='extra' embed='false'/>
 	</section>
 
 	<assets path="assets/fonts" />
