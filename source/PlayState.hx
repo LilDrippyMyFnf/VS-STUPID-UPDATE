@@ -321,6 +321,8 @@ class PlayState extends MusicBeatState
 	var topBar:FlxSprite;
 	var bottomBar:FlxSprite;
 
+	var bgCharacter:FlxSprite;
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -3831,6 +3833,12 @@ class PlayState extends MusicBeatState
 					removeCinematicBars(Std.parseFloat(value1));
 				});*/
 				cinematicBars(value1.toLowerCase() == 'true' ? true : false);
+			
+			case 'add BG character':
+				addBGCharacter();
+
+			case 'do BG character':
+				doBGCharacterMovement();
 		}
 		callOnLuas('onEvent', [eventName, value1, value2]);
 	}
@@ -4959,6 +4967,46 @@ class PlayState extends MusicBeatState
 			tankGround.angle = tankAngle - 90 + 15;
 			tankGround.x = tankX + 1500 * Math.cos(Math.PI / 180 * (1 * tankAngle + 180));
 			tankGround.y = 1300 + 1100 * Math.sin(Math.PI / 180 * (1 * tankAngle + 180));
+		}
+	}
+
+	inline function addBGCharacter(?sprite:String, ?library:String, ?animated:Bool = false, ?animShit:SpriteDefs){
+		var character:FlxSprite = new FlxSprite(0,0);
+		if (!animated){
+			character.loadGraphic(Paths.image(sprite, library));
+		}
+		else {
+			character.frames = Paths.getSparrowAtlas(sprite);
+			character.animation.addByPrefix(animShit.name, animShit.prefix, animShit.frameRate, animShit.looped, animShit.flipX, animShit.flipY);
+		}
+		character.setPosition(-500, -200);
+		character.antialiasing = ClientPrefs.globalAntialiasing;
+		character.scrollFactor.set(0, 0);
+		character.cameras = [camOther];
+		character.screenCenter();
+		character.updateHitbox();
+		character.visible = false;
+
+		bgCharacter = Reflect.copy(character);
+
+		return character;
+	}
+
+	inline function doBGCharacterMovement(){
+		for (i in 0...WeekData.weeksList.length){
+			if (WeekData.weeksList[i] == 'week2'){
+				if (bgCharacter != null){
+					FlxTween.tween(bgCharacter, {x: 900}, 5, {
+						ease: FlxEase.circInOut,
+						onComplete: _ -> {
+							if (bgCharacter != null){
+								bgCharacter.destroy();
+								bgCharacter = null;
+							}
+						}
+					});
+				}
+			}
 		}
 	}
 
