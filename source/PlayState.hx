@@ -1892,7 +1892,7 @@ class PlayState extends MusicBeatState
 				// Beep!
 				cutsceneHandler.timer(4.5, function()
 				{
-					boyfriend.playAnim('singUP', true);
+					boyfriend.playAnim('singLEFT', true);
 					boyfriend.specialAnim = true;
 					FlxG.sound.play(Paths.sound('bfBeep'));
 				});
