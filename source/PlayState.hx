@@ -3838,7 +3838,7 @@ class PlayState extends MusicBeatState
 				var f:Array<String> = value1.split(',');
 				var splitter:Array<String> = value2.split(',');
 				var piss:Bool = trueorfalse(splitter[0]);
-				var defsMap:Map<Array<Dynamic>;
+				var defsMap:Map<Array<Dynamic>, 
 				var defs:SpriteDefs = null;
 				for (i in 0...split2.length)
 					defs = split2[i];
