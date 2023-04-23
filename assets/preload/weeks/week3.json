@@ -1,4 +1,16 @@
 {
+	"storyName": "Stickman's week - week 3",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "stickman",
+	"weekBefore": "week2",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"Icky-Stick",
@@ -17,43 +29,13 @@
 				0,
 				0
 			]
-		],
-		[
-			"Sp0rk-Sh1ne",
-			"stickman",
-			[
-				0,
-				255,
-				213
-			]
-		],
-		[
-			"Daylight-Madness",
-			"stupidnor",
-			[
-				255,
-				93,
-				255
-			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stickman",
-	"difficulties": "Hard",
 	"weekCharacters": [
 		"",
 		"",
 		""
 	],
-	"storyName": "Stickman's week - week 3",
-	"weekName": "stickman's week",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
-	"hideStoryMode": false,
-	"weekBefore": "week2",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "stickman's week"
 }

@@ -1,4 +1,16 @@
 {
+	"storyName": "This is for freeplay dumbass!",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
 	"songs": [
 		[
 			"Retro-Swag",
@@ -8,25 +20,22 @@
 				0,
 				35
 			]
+		],
+		[
+			"Cucumber",
+			"coral",
+			[
+				206,
+				180,
+				0
+			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"difficulties": "",
 	"weekCharacters": [
 		"",
 		"bf",
 		"gf"
 	],
-	"storyName": "This is for freeplay dumbass!",
-	"weekName": "Freeplay Songs",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
-	"hideStoryMode": true,
-	"weekBefore": "",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "Freeplay Songs"
 }
