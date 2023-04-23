@@ -2496,12 +2496,13 @@ class PlayState extends MusicBeatState
 			{
 				for (i in 0...event[1].length)
 				{
-					var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
+					var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2], event[1][i][3]];
 					var subEvent:EventNote = {
 						strumTime: newEventNote[0] + ClientPrefs.noteOffset,
 						event: newEventNote[1],
 						value1: newEventNote[2],
-						value2: newEventNote[3]
+						value2: newEventNote[3],
+						value3: newEventNote[4]
 					};
 					eventNotes.push(subEvent);
 					eventPushed(subEvent);
@@ -2595,12 +2596,13 @@ class PlayState extends MusicBeatState
 		{
 			for (i in 0...event[1].length)
 			{
-				var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2]];
+				var newEventNote:Array<Dynamic> = [event[0], event[1][i][0], event[1][i][1], event[1][i][2], event[1][i][3]];
 				var subEvent:EventNote = {
 					strumTime: newEventNote[0] + ClientPrefs.noteOffset,
 					event: newEventNote[1],
 					value1: newEventNote[2],
-					value2: newEventNote[3]
+					value2: newEventNote[3],
+					value3: newEventNote[4]
 				};
 				eventNotes.push(subEvent);
 				eventPushed(subEvent);
@@ -2691,7 +2693,7 @@ class PlayState extends MusicBeatState
 	}
 
 	function eventNoteEarlyTrigger(event:EventNote):Float {
-		var returnedValue:Null<Float> = callOnLuas('eventEarlyTrigger', [event.event, event.value1, event.value2, event.strumTime], [], [0]);
+		var returnedValue:Null<Float> = callOnLuas('eventEarlyTrigger', [event.event, event.value1, event.value2, event.value3, event.strumTime], [], [0]);
 		if(returnedValue != null && returnedValue != 0 && returnedValue != FunkinLua.Function_Continue) {
 			return returnedValue;
 		}
@@ -3426,7 +3428,11 @@ class PlayState extends MusicBeatState
 			if(eventNotes[0].value2 != null)
 				value2 = eventNotes[0].value2;
 
-			triggerEventNote(eventNotes[0].event, value1, value2);
+			var value3:String = '';
+			if(eventNotes[0].value3 != null)
+				value3 = eventNotes[0].value3;			
+
+			triggerEventNote(eventNotes[0].event, value1, value2, value3);
 			eventNotes.shift();
 		}
 	}
@@ -3437,7 +3443,7 @@ class PlayState extends MusicBeatState
 		return pressed;
 	}
 
-	public function triggerEventNote(eventName:String, value1:String, value2:String) {
+	public function triggerEventNote(eventName:String, value1:String, value2:String, value3:String) {
 		switch(eventName) {
 			case 'Dadbattle Spotlight':
 				var val:Null<Int> = Std.parseInt(value1);
@@ -3838,16 +3844,22 @@ class PlayState extends MusicBeatState
 				var f:Array<String> = value1.split(',');
 				var splitter:Array<String> = value2.split(',');
 				var piss:Bool = trueorfalse(splitter[0]);
-				var defsMap:Map<Array<Dynamic>, 
 				var defs:SpriteDefs = null;
-				for (i in 0...split2.length)
-					defs = split2[i];
+				var e:Array<String> = value3.split(',');
+				var defines:Array<Dynamic> = [e[0], e[1], Std.parseInt(e[2]), trueorfalse(e[3]), trueorfalse(e[4]), trueorfalse(e[5])];
+				defs.name = defines[0];
+				defs.prefix = defines[1];
+				defs.frameRate = defines[2];
+				defs.looped = defines[3];
+				defs.flipX = defines[4];
+				defs.flipY = defines[5];
+
 				addBGCharacter(f[0], f[1], piss, defs);
 
 			case 'do BG character':
 				doBGCharacterMovement();
 		}
-		callOnLuas('onEvent', [eventName, value1, value2]);
+		callOnLuas('onEvent', [eventName, value1, value2, value3]);
 	}
 
 	inline function trueorfalse(which:String):Bool{
