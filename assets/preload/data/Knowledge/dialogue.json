@@ -62,7 +62,7 @@
 			"portrait": "StupidNor",
 			"boxState": "normal",
 			"expression": "talk",
-			"text": "I flew STRAIGHT towards my house ( behind you )"
+			"text": "It flew STRAIGHT towards my house ( behind you )"
 		},
 		{
 			"sound": "",
@@ -78,7 +78,7 @@
 			"portrait": "StupidNor",
 			"boxState": "normal",
 			"expression": "excited",
-			"text": "Didn't kill my house tho :P"
+			"text": "Didn't destroy my house tho :P"
 		},
 		{
 			"sound": "",
@@ -86,7 +86,7 @@
 			"portrait": "bf",
 			"boxState": "angry",
 			"expression": "excited",
-			"text": "That's good. Anyway, Let's rap battle!"
+			"text": "That's good. Anyway, Let's have a rap battle!"
 		},
 		{
 			"sound": "",
