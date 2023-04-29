@@ -141,6 +141,7 @@ class PlayState extends MusicBeatState
 	public var vocals:FlxSound;
 
 	public var dad:Character = null;
+	public var dadMirror:Character = null;
 	public var gf:Character = null;
 	public var boyfriend:Boyfriend = null;
 
@@ -956,6 +957,13 @@ class PlayState extends MusicBeatState
 		startCharacterPos(dad, true);
 		dadGroup.add(dad);
 		startCharacterLua(dad.curCharacter);
+
+		if (SONG.player4 != null){
+			dadMirror = new Character(0, 0, SONG.player4);
+			startCharacterPos(dadMirror, true);
+			dadGroup.add(dadMirror);
+			startCharacterLua(dadMirror.curCharacter);
+		}
 
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 		startCharacterPos(boyfriend);
@@ -2187,6 +2195,13 @@ class PlayState extends MusicBeatState
 				if (tmr.loopsLeft % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 				{
 					dad.dance();
+				}
+				if (dadMirror != null){
+					if (tmr.loopsLeft % dadMirror.danceEveryNumBeats == 0 && dadMirror.animation.curAnim != null && !dadMirror.animation.curAnim.name.startsWith('sing') 
+						&& !dadMirror.stunned)
+					{
+						dadMirror.dance();
+					}
 				}
 
 				var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
@@ -4639,6 +4654,9 @@ class PlayState extends MusicBeatState
 			if(note.gfNote) {
 				char = gf;
 			}
+			if (note.noAnimation){
+				char = dadMirror;
+			}
 
 			if(char != null)
 			{
@@ -5108,6 +5126,12 @@ class PlayState extends MusicBeatState
 		if (curBeat % dad.danceEveryNumBeats == 0 && dad.animation.curAnim != null && !dad.animation.curAnim.name.startsWith('sing') && !dad.stunned)
 		{
 			dad.dance();
+		}
+		if (dadMirror != null){
+			if (curBeat % dadMirror.danceEveryNumBeats == 0 && dadMirror.animation.curAnim != null && !dadMirror.animation.curAnim.name.startsWith('sing') && !dadMirror.stunned)
+			{
+				dadMirror.dance();
+			}
 		}
 
 		switch (curStage)
