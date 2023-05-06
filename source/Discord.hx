@@ -43,9 +43,9 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "Title State",
+			details: "In Menus",
 			state: null,
-			largeImageKey: 'iconOG',
+			largeImageKey: 'Psych Engine', // if this shows psych engine as the text discription then change this / revert back
 			largeImageText: "Vs Stupid v1"
 		});
 	}
