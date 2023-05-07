@@ -85,16 +85,16 @@ class PlayState extends MusicBeatState
 	public static inline final STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['Ur Bad :(', 0.2], //From 0% to 19%
-		['...', 0.4], //From 20% to 39%
-		['UGH', 0.5], //From 40% to 49%
-		['What...', 0.6], //From 50% to 59%
-		['Bleh', 0.69], //From 60% to 68%
-		['Decent..', 0.7], //69%
-		['Average', 0.8], //From 70% to 79%
-		['Sick!!', 0.9], //From 80% to 89%
-		['Fire!!', 1], //From 90% to 99%
-		['Yeah!!!!!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['ASS', 0.2], //From 0% to 19%
+		['Terrible', 0.4], //From 20% to 39%
+		['Awful', 0.5], //From 40% to 49%
+		['Bad', 0.6], //From 50% to 59%
+		['Ok', 0.69], //From 60% to 68%
+		['Fine', 0.7], //69%
+		['Decent', 0.8], //From 70% to 79%
+		['Good', 0.9], //From 80% to 89%
+		['Amazing', 1], //From 90% to 99%
+		['W!!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
 	//event variables
@@ -2363,7 +2363,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.text = 'Score: ' + songScore
 		+ ' | Combo Breaks: ' + songMisses // fuck it, i'm adding kade engine text now xd
 		+ ' | Rating: ' + ratingName
-		+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
+		+ (ratingName != '...' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
 
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
